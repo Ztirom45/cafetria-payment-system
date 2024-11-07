@@ -162,18 +162,6 @@
         "output": ".pio/build/uno/libbad/Keypad/Keypad.cpp.o"
     },
     {
-        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib8f0/SPI/SPI.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard /home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
-        "directory": "/home/moritz/dev/Arduino/cafeteria",
-        "file": "/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
-        "output": ".pio/build/uno/lib8f0/SPI/SPI.cpp.o"
-    },
-    {
-        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libf16/SoftwareSerial/SoftwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard /home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
-        "directory": "/home/moritz/dev/Arduino/cafeteria",
-        "file": "/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
-        "output": ".pio/build/uno/libf16/SoftwareSerial/SoftwareSerial.cpp.o"
-    },
-    {
         "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib17c/Wire/Wire.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard /home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src/Wire.cpp",
         "directory": "/home/moritz/dev/Arduino/cafeteria",
         "file": "/home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src/Wire.cpp",
@@ -186,7 +174,55 @@
         "output": ".pio/build/uno/lib17c/Wire/utility/twi.c.o"
     },
     {
-        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I.pio/libdeps/uno/Keypad/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard src/main.cpp",
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o \".pio/build/uno/libc01/Grove - LCD RGB Backlight/rgb_lcd.cpp.o\" -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 \"-I.pio/libdeps/uno/Grove - LCD RGB Backlight\" -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard \".pio/libdeps/uno/Grove - LCD RGB Backlight/rgb_lcd.cpp\"",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/Grove - LCD RGB Backlight/rgb_lcd.cpp",
+        "output": ".pio/build/uno/libc01/Grove - LCD RGB Backlight/rgb_lcd.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib8f0/SPI/SPI.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard /home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": "/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src/SPI.cpp",
+        "output": ".pio/build/uno/lib8f0/SPI/SPI.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib96e/SD/File.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/SD/src/File.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/SD/src/File.cpp",
+        "output": ".pio/build/uno/lib96e/SD/File.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib96e/SD/SD.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/SD/src/SD.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/SD/src/SD.cpp",
+        "output": ".pio/build/uno/lib96e/SD/SD.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib96e/SD/utility/Sd2Card.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/SD/src/utility/Sd2Card.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/SD/src/utility/Sd2Card.cpp",
+        "output": ".pio/build/uno/lib96e/SD/utility/Sd2Card.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib96e/SD/utility/SdFile.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/SD/src/utility/SdFile.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/SD/src/utility/SdFile.cpp",
+        "output": ".pio/build/uno/lib96e/SD/utility/SdFile.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/lib96e/SD/utility/SdVolume.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard .pio/libdeps/uno/SD/src/utility/SdVolume.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": ".pio/libdeps/uno/SD/src/utility/SdVolume.cpp",
+        "output": ".pio/build/uno/lib96e/SD/utility/SdVolume.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/libf16/SoftwareSerial/SoftwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard /home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
+        "directory": "/home/moritz/dev/Arduino/cafeteria",
+        "file": "/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src/SoftwareSerial.cpp",
+        "output": ".pio/build/uno/libf16/SoftwareSerial/SoftwareSerial.cpp.o"
+    },
+    {
+        "command": "/home/moritz/.platformio/packages/toolchain-atmelavr/bin/avr-g++ -o .pio/build/uno/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega328p -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60116 -DARDUINO_AVR_UNO -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src -I.pio/libdeps/uno/SD/src -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/SPI/src \"-I.pio/libdeps/uno/Grove - LCD RGB Backlight\" -I/home/moritz/.platformio/packages/framework-arduino-avr/libraries/Wire/src -I.pio/libdeps/uno/Keypad/src -I/home/moritz/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/moritz/.platformio/packages/framework-arduino-avr/variants/standard src/main.cpp",
         "directory": "/home/moritz/dev/Arduino/cafeteria",
         "file": "src/main.cpp",
         "output": ".pio/build/uno/src/main.cpp.o"

@@ -13,6 +13,8 @@ Warning:
 #include <Wire.h>
 #include <Keypad.h>
 #include <rgb_lcd.h>
+#include <user.hpp>
+#include <data.hpp>
 
 //keypad setup
 const byte ROWS = 4;
@@ -24,7 +26,8 @@ char hexaKeys[ROWS][COLS] = {
   { '7', '8', '9' },
   { '*', '0', '#' }
 };
-byte rowPins[ROWS] = { 5, 12, 11, 6 };
+//byte rowPins[ROWS] = { 5, 12, 11, 6 };
+byte rowPins[ROWS] = { 5, 1, 0, 6 };
 byte colPins[COLS] = { 9, 8, 7 };
 
 Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS);
@@ -33,19 +36,7 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 rgb_lcd lcd;
 SoftwareSerial SoftSerial(2, 3);
 
-//User data:
-//Warning cant store more than ten Users
-typedef struct User {
-  String id;
-  int money;
-  /*Sting name;*/
-} User;
 
-int USER_COUNT = 1;
-#define USER_ARRAY_SIZE 10
-User users[USER_ARRAY_SIZE] = {
-  { "0116646F302C", 10000 },
-};
 
 User user_edit(User user) {
   lcd.setCursor(0, 0);
@@ -110,86 +101,11 @@ void add_user(String id) {
   lcd.setCursor(0, 0);
   lcd.print("Next One");
 }
-/*              SD card           */
-#include <SPI.h>
-#include <SD.h>
-File myFile;
 
-//not used at the moment
-void setup_sd() {
-  Serial.print("Init SD card...");
-
-  if (!SD.begin(4)) {
-    Serial.println(1);
-    while (1)
-      ;
-  }
-  Serial.println(0);
-
-  // open the file. note that only one file can be open at a time,
-  // so you have to close this one before opening another.
-  //myFile = SD.open("test.txt", FILE_WRITE);
-
-  // if the file opened okay, write to it:
-  /*
-  if (myFile) {
-    Serial.print(3);
-    myFile.println("test");
-    // close the file:
-    myFile.close();
-    Serial.println(0);
-  } else {
-    // if the file didn't open, print an error:
-    Serial.println(4);
-  }*/
-
-  // re-open the file for reading:
-  //read_from_sd();
-}
-//not used at the moment
-void read_from_sd() {
-  /*
-    not implemented
-  */
-  myFile = SD.open("test.txt");
-  String data = "";
-  if (myFile) {
-    
-    // read from the file until there's nothing else in it:
-    while (myFile.available()){
-      data = myFile.readString();
-    }
-    Serial.println(data);
-
-    // close the file:
-    myFile.close();
-  } else {
-    // if the file didn't open, print an error:
-    Serial.println(5);
-  }
-  //parse data to user array
-  int pos = data.lastIndexOf("\n");
-  int counter = 1;
-  while (pos != -1) {//separates string in reverse order and pushes to args
-    String user = data.substring(0,pos);
-    //Serial.println(user);
-    int seperator = user.lastIndexOf(",");
-    //Serial.println(user.substring(0,seperator));
-    //Serial.println(user.substring(seperator+1,user.lastIndexOf("\n")));
-    Serial.println(user.substring(0,seperator-2));
-    users[counter].id=(String)(user.substring(0,seperator));
-    Serial.println(users[counter].id);
-    users[counter++].money=user.substring(seperator+1,user.lastIndexOf("\n")).toInt();
-    data.remove(pos, pos + user.length());
-    pos = data.lastIndexOf("\n");
-  }
-  Serial.println(users[1].id);
-  Serial.println(users[1].money);
-}
 
 void setup() {
   Serial.begin(9600);  // the Serial port of Arduino baud rate.
-  //setup_sd();
+  setup_sd();
   SoftSerial.begin(9600);  // the SoftSerial baud rate
 
   lcd.begin(16, 2);
@@ -201,7 +117,7 @@ void setup() {
 }
 
 void loop() {
-  if (millis() > 3000) {// start loop after 3 secs
+  if (millis() > 5000) {// start loop after 5 secs
     if (SoftSerial.available()) {
       String buffer2 = "";
 
@@ -214,7 +130,7 @@ void loop() {
       for (int user_pointer = 0; user_pointer < USER_COUNT; user_pointer++) {
         if (users[user_pointer].id == buffer2) {
           users[user_pointer] = user_edit(users[user_pointer]);
-          Serial.println(users[user_pointer].money);
+          save_user();
           known_user = true;
           break;
         }
