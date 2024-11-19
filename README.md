@@ -1,7 +1,7 @@
 # cafeteria payment system
 a easy way to implement cachless payment into small shops like a cafetiria in school using RFID chips
 
-<img src="rsc/img.png">
+<img width="50%" src="rsc/img.png">
 
 ## fetures
 - [x] saves money using acounts on device
