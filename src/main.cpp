@@ -1,11 +1,9 @@
 /*
-Code written by Ztirom45 (Moritz)
+Code written by Ztirom45
 LICENSE: GPL4
 
 Warning:
-- SD-card user saving does not work at the moment
 - This code is not ready for real usecases
-- The users and theyer money are stored in RAM
 */
 
 #include <Arduino.h>
