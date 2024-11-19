@@ -9,5 +9,14 @@ a easy way to implement cachless payment into small shops like a cafetiria in sc
 - [x] saves money using acounts on device
 - [x] saves data on SD-card, to stay the same after unplugin from power
 
+## technical setup
+<img width="100%" src="rsc/img.png">
+
+- Arduino Uno
+- RFID reader
+- keypad
+- alphanumeric LCD display
+- sd card shield 
+
 ## warning:
 - because of the RAM lemitations of the Arduino it can handle just a few users.
