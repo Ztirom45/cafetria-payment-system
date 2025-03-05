@@ -3,7 +3,8 @@
 
 #include <Arduino.h>
 //User data:
-//Warning cant store more than ten Users
+//Warning cant store more than ten Users in RAM
+//and probably less on disk
 typedef struct User {
   String id;
   int money;
