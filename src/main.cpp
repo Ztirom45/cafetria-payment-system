@@ -35,6 +35,7 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 //lcd
 rgb_lcd lcd;
+//rfid reader conected via softserial
 SoftwareSerial SoftSerial(2, 3);
 
 
@@ -53,7 +54,7 @@ User user_edit(User user) {
     if (customKey) {
       if (customKey == (char)'#') {  //enter
         loop = false;
-      } else if (customKey == (char)'*') {  // +/-
+      }else if (customKey == (char)'*') {  // toggle +/-
         lcd.setCursor(changes_pos, 1);
         if (add) {
           lcd.print("-");
@@ -62,7 +63,7 @@ User user_edit(User user) {
           lcd.print("+");
           add = true;
         }
-      } else {
+      }else {//must be a digit 
         number += customKey;
         lcd.setCursor(changes_pos + 1, 1);
         lcd.print(number);
@@ -78,11 +79,14 @@ User user_edit(User user) {
   }
   lcd.print(user.money);
   lcd.print("       ");
+  //prepare for normal mode
   delay(500);
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Next One");
+#ifdef DEBUG
   Serial.println("done");
+#endif
   return user;
 }
 
@@ -109,7 +113,9 @@ void add_user(String id) {
 
 
 void setup() {
-  
+#ifdef DEBUG
+  Serial.begin(9600);
+#endif
   setup_sd();
   
   //setup RFID reader 
